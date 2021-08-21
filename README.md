@@ -5,7 +5,7 @@ Created by [Cameron Fairchild](https://github.com/camfairchild/), [Eddie Liang](
 for [Hack the 6ix 2021](https://hackthe6ix2021.devpost.com/)
 
 ## How it Works
-Text your search query to <number> and we will respond with a short list of results:  
+Text your search query to (289) 274-9428 and we will respond with a short list of results:  
   
     [0] Result 1
     [1] Result 2
