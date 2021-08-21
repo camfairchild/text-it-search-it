@@ -1,6 +1,9 @@
 from jokeapi import Jokes
 
-def joke_message() -> str:
-    j = Jokes()
-    joke = j.get_joke(response_format="txt")
+import asyncio
+
+async def joke_message() -> str:
+    j = await Jokes()
+    joke = await j.get_joke(response_format="txt")
+    
     return joke
