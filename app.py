@@ -1,34 +1,9 @@
 from flask import Flask, request
-from twilio.rest import Client
-
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-# Your Account SID from twilio.com/console
-account_sid = os.getenv('TWILIO_ACCOUNT_SID')
-# Your Auth Token from twilio.com/console
-auth_token  = os.getenv('TWILIO_AUTH_TOKEN')
-
-client = Client(account_sid, auth_token)
+from v0 import v0_blueprint
 
 app = Flask(__name__)
 
-@app.route('/sms', methods=['POST'])
-def sms():
-    number = request.form['From']
-    message_body = request.form['Body']
-
-    resp = twiml.Response()
-    resp.message('Hello {}, you said: {}'.format(number, message_body))
-
-    message = client.messages.create(
-        to="+15558675309", 
-        from_="+15017250604",
-        body="Hello from Python!")
-    return str(resp)
-
+app.register_blueprint(v0_blueprint, url_prefix='/v0')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=8080)
