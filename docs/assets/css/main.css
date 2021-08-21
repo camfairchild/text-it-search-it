@@ -101,7 +101,7 @@
 	body, input, select, textarea {
 		color: #777;
 		font-family: "Source Sans Pro", sans-serif;
-		font-size: 32pt;
+		font-size: 16pt;
 		font-weight: 300;
 		line-height: 1.65em;
 		letter-spacing: -0.015em;
@@ -147,13 +147,13 @@
 		}
 
 	h2 {
-		font-size: 9.2em;
+		font-size: 1.75em;
 		line-height: 1.5em;
 		letter-spacing: -0.035em;
 	}
 
 	h3 {
-		font-size: 1.75em;
+		font-size: 1.1em;
 		line-height: 1.5em;
 		letter-spacing: -0.025em;
 	}
