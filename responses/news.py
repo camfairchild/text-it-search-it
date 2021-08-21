@@ -12,8 +12,7 @@ def get_news() -> str:
     for i in range((min(5, int(response.json()["num_results"])))):
         title = results[i]["title"]
         headlines += (f"[{i}] {title}\n")
-
-
+    # TODO: save state of user and respond with news article after choice
     return headlines
 
 def news_message(news_str: str) -> str:
