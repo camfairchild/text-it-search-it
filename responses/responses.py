@@ -1,4 +1,4 @@
-from .help import help_message
+#from .help import help_message
 from .weather import weather_message
 from .news import news_message
 from .translate import translate_message
@@ -13,7 +13,8 @@ def get_response(body: str) -> str:
     if (body[0] == '!') or (body[0] == '/'):
         body = body[1:]
         if (body.startswith('help')):
-            return help_message()
+            #return help_message()
+            return ""
         elif (body.startswith('weather')):
             return weather_message(body[7:])
         elif (body.startswith('news')):
