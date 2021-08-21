@@ -1,8 +1,9 @@
 import requests
 from .helpers import google
 
-def time_message(time_str: str) -> str:
+def time_message(query_str: str) -> str:
     """Returns a message of the current time"""
-    lat, long = google.get_location(time_str)
-    time = google.get_time_by_lat_long(lat, long)
-    return f"It is currently {time} in {time_str}"
+    coords = google.get_location(query_str)
+    time = google.get_time_by_lat_long(coords)
+    time_str =  time.strftime('%I:%M:%S %p')
+    return f"It is currently {time_str} in {query_str}"
