@@ -10,7 +10,7 @@ from .error import error_message
 from .search import search_message
 
 def get_response(body: str) -> str:
-    if (body.startswith('!')):
+    if (body[0] == '!') or (body[0] == '/'):
         body = body[1:]
         if (body.startswith('help')):
             return help_message()
