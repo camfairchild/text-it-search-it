@@ -1,7 +1,7 @@
 # text-it-search-it
 An SMS hotline to search
 
-Created by [Cameron Fairchild](https://github.com/camfairchild/), [Eddie Liang](https://github.com/edd1eliang/), [Bryan Lee](https://github.com/B-lee71/) [Stanley](https://github.com/stanley021/)
+Created by [Cameron Fairchild](https://github.com/camfairchild/), [Eddie Liang](https://github.com/edd1eliang/), [Bryan Lee](https://github.com/B-lee71/), [Stanley](https://github.com/stanley021/)
 
 ## How it Works
 Text your search query to <number> and we will respond with a short list of results:  
