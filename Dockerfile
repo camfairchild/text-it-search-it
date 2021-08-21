@@ -10,4 +10,4 @@ COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt
 EXPOSE 8080:8080
 COPY . .
-CMD exec gunicorn --bind :8080 --workers 1 --threads 8 --timeout 0 main:app
+CMD [ "python", "main.py" ]

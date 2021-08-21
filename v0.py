@@ -3,7 +3,7 @@ from flask import Blueprint, request, jsonify
 from twilio.twiml.messaging_response import MessagingResponse, Message
 from twilio.rest import Client
 
-import sys
+import asyncio
 import os
 from dotenv import load_dotenv
 
@@ -26,7 +26,7 @@ client = Client(account_sid, auth_token)
 v0_blueprint = Blueprint('v0', __name__)
 
 @v0_blueprint.route("/query", methods=['POST'])
-def sms_reply():
+async def sms_reply():
     from_number = request.form['From']
     to_number = request.form['To']
     body: str = request.form['Body']
@@ -34,5 +34,5 @@ def sms_reply():
             
     
     response = MessagingResponse()
-    response.message(get_response(body))
+    response.message(await get_response(body))
     return str(response)
