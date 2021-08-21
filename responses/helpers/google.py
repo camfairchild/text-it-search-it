@@ -15,7 +15,7 @@ def get_location(loc_str: str) -> Tuple[float, float]:
     loc_lng = loc_json['results'][0]['geometry']['location']['lng']
     return loc_lat, loc_lng
 
-def get_time_by_lat_long(coords: Tuple[int, int]) -> str:
+def get_time_by_lat_long(coords: Tuple[int, int]) -> datetime:
     """
     Returns the timezone in which the given coordinates are located.
     """
@@ -30,4 +30,4 @@ def get_time_by_lat_long(coords: Tuple[int, int]) -> str:
     dstOffset = r.json()['dstOffset']
     offset = rawOffset + dstOffset
     time = datetime.utcnow() + timedelta(seconds=offset)
-    return time.strftime('%H:%M')
+    return time
