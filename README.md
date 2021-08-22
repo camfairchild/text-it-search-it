@@ -29,3 +29,17 @@ Such as
 - /weather <loc> - weather at loc
 
 **That's it!**
+
+ ## Technologies and Libraries
+  We make use of
+  - Google Cloud (GKE, Directions API, Geolocation API, Custom Search API, Translate API, Timezone API, etc.)
+  - Docker
+  - Flask
+  - CockroachDB (postgresql-based)
+  - NY Times Top Stories API
+  - CloudFlare for Nameservers and Proxy
+  - Domain.com for the .tech domain
+  - WeatherBit Weather API
+  - Twilio for SMS
+  - jokeapi
+  
