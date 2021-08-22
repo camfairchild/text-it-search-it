@@ -20,4 +20,4 @@ RUN wget http://corpus.tools/raw-attachment/wiki/Downloads/justext-3.0.tar.gz &&
     python3 setup.py install --user
 
 
-CMD ["python3", "main.py"]
+CMD exec gunicorn --bind :8080 --workers 1 --threads 8 --timeout 0 main:app
