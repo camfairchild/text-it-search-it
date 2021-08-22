@@ -2838,8 +2838,9 @@
 		input[type="reset"].primary,
 		input[type="button"].primary,
 		.button.primary {
-			background-color: #e89980;
-			color: #ffffff !important;
+			background-color: white;
+			color: black !important;
+			font-weight: 590;
 		}
 
 			input[type="submit"].primary:hover,
@@ -3149,6 +3150,25 @@
 			}
 
 /* Banner */
+	#title{ 
+		font-size: 84px;
+		font-weight: 900;
+		margin-bottom: 3%;
+		font-style:oblique;
+		color: rgb(214, 214, 214);
+
+		}
+	#banner1 {
+		background-attachment: scroll,fixed;
+		background-color: white;
+		background-image: url("images/overlay.png"), url("../../images/text-message-tax.jpg");
+		background-position: top left,center center;
+		background-repeat: repeat,no-repeat;
+		background-size: auto,cover;
+		color: #fff;
+		padding: 12em 0 20em 0;
+		text-align: center;
+	}
 
 	#banner {
 		background-attachment: scroll,							fixed;
