@@ -6,3 +6,4 @@ README.md
 *.pyo
 *.pyd
 .pytest_cache
+docs/
