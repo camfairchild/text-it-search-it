@@ -1,5 +1,5 @@
 #!/usr/bin/env python3.9
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, g
 from twilio.twiml.messaging_response import MessagingResponse, Message
 from twilio.rest import Client
 
@@ -29,10 +29,8 @@ v0_blueprint = Blueprint('v0', __name__)
 async def sms_reply():
     from_number = request.form['From']
     to_number = request.form['To']
-    body: str = request.form['Body']
-
-            
+    body: str = request.form['Body']   
     
     response = MessagingResponse()
-    response.message(await get_response(body))
-    return str(response)
+    response.message(await get_response(body, from_number, g.get('conn')))
+    return str(response)[:160]

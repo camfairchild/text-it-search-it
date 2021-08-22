@@ -1,4 +1,4 @@
-import requests, os, html
+import requests, os
 from .helpers.parse import remove_html_tags
 
 def get_directions(origin: str, destination: str) -> str:
@@ -13,7 +13,6 @@ def get_directions(origin: str, destination: str) -> str:
     directions_str = ""
     for step in steps:
         directions_str += remove_html_tags(step["html_instructions"]) + "\n"
-    print(directions_str)
     return directions_str
 
 def directions_message(directions_str: str) -> str:

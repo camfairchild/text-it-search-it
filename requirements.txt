@@ -20,10 +20,12 @@ idna==3.2
 itsdangerous==2.0.1
 Jinja2==3.0.1
 jokeapi==1.0.2
+lxml==4.6.3
 MarkupSafe==2.0.1
 multidict==5.1.0
 packaging==21.0
 protobuf==3.17.3
+psycopg2-binary==2.9.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 pycountry==20.7.3

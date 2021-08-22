@@ -7,3 +7,5 @@ README.md
 *.pyd
 .pytest_cache
 docs/
+LICENSE
+.gitignore

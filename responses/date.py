@@ -8,4 +8,4 @@ def date_message(date_str: str) -> str:
     # Get the current date
     date = get_time_by_lat_long(location)
 
-    return f"Today is {date.strftime('%a %d %b')}."
+    return f"The date in {location} is {date.strftime('%a %d %b')}."
