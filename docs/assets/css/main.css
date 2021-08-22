@@ -2372,6 +2372,7 @@
 			text-transform: none !important;
 			font-family: 'Font Awesome 5 Free';
 			font-weight: 400;
+			
 		}
 
 		.icon > .label {
@@ -2991,7 +2992,7 @@
 					}
 
 						#header nav > ul > li a:not(.button).icon:before {
-							color: #999;
+							color: black;
 							margin-right: 0.5em;
 						}
 
@@ -3061,7 +3062,7 @@
 		}
 
 			#header.alt nav > ul > li a:not(.button).icon:before {
-				color: rgba(255, 255, 255, 0.75);
+				color: grey;
 			}
 
 			#header.alt nav > ul > li.active a:not(.button) {
