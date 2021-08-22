@@ -33,4 +33,4 @@ async def sms_reply():
     
     response = MessagingResponse()
     response.message(await get_response(body, from_number, g.get('conn')))
-    return str(response)[:160]
+    return str(response)[:350]

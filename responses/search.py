@@ -14,8 +14,7 @@ def search_message(conn, phone_number: str, query_str: str) -> str:
         "q": query_str,
     }
 
-    data = requests.get(url, params=params).json()
-    print(data)
+    data = requests.get(url, params=params).json()\
 
     search_items = data["items"][:5]
 
