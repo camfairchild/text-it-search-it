@@ -32,5 +32,6 @@ async def sms_reply():
     body: str = request.form['Body']   
     
     response = MessagingResponse()
-    response.message(await get_response(body, from_number, g.get('conn')))
-    return str(response)[:350]
+    text = await get_response(body, from_number, g.get('conn'))
+    response.message(text[:350])
+    return str(response)
